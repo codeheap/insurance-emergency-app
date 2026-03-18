@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Insurance Emergency API
+  description: API for handling insurance emergencies.
+  version: "1.0.0"
+servers:
+  - url: https://api.insurance-emergency-app.com/v1
+paths:
+  /emergency:
+    get:
+      summary: Get emergency details
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Emergency details retrieved successfully."
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: "emergency_123"
+                      status:
+                        type: string
+                        example: "active"
